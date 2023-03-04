@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.row {
+  background-color: $white-color;
+
+  td {
+    padding: 4px;
+  }
+}
+
+.user-id,
+.username,
+.order-id,
+.status,
+.total,
+.created-at {
+  text-align: center;
+  width: 16%;
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+.form-group {
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  input,
+  select {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 4px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid $dim-color;
+  }
+}
+.action {
+  margin-top: 20px;
+}

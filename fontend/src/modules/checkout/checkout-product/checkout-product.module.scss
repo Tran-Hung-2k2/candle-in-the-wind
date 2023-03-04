@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  min-height: 100%;
+}
+
+.body {
+  background-color: $white-color;
+}
+
+.summary {
+  border-top: 2px solid #eee;
+  padding: 16px 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    color: #aaa;
+    font-weight: 600;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}

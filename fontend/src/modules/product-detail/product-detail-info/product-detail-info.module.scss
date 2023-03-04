@@ -1,0 +1,194 @@
+@import '../../../styles/variables.scss';
+
+.categoryName {
+  font-size: 14px;
+  font-weight: 500;
+  color: $primary-color;
+  text-decoration: underline;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.stars {
+  margin-right: 20px;
+  display: flex;
+  i {
+    margin: 0 1px;
+  }
+  .rating {
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding: 0 2px;
+    margin-right: 8px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.price {
+  padding: 20px 0px;
+  font-weight: 500;
+  display: flex;
+  align-items: start;
+  .oldPrice {
+    color: #777;
+    font-size: 20px;
+    position: relative;
+    margin-right: 20px;
+    transform: translateY(12px);
+    padding: 0 3px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 55%;
+      left: 0%;
+      width: 100%;
+      height: 2px;
+      background-color: #aaa;
+      transform: translateY(-50%);
+    }
+  }
+
+  .salePrice {
+    font-size: 40px;
+    color: $primary-color;
+  }
+
+  .sale {
+    background-color: $primary-color;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: $white-color;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 12px;
+  }
+}
+.desc {
+  width: 60%;
+  font-size: 14px;
+  letter-spacing: 0.02rem;
+  line-height: 1.5;
+  padding: 10px 0;
+  font-weight: 500;
+}
+
+.action {
+  display: flex;
+  padding: 20px 0;
+
+  button {
+    margin-right: 12px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  i {
+    margin-right: 4px;
+  }
+
+  .btnAdd {
+    background-color: $light-primary-color;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+
+  .btnBuy {
+    background-color: $primary-color;
+    color: $white-color;
+    border: 2px solid $primary-color;
+  }
+}
+
+.title {
+  margin-right: 8px;
+}
+
+.quantity {
+  margin-right: 8px;
+  button,
+  input {
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+  }
+  button {
+    background-color: $white-color;
+    border: 1px solid $dim-color;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+  }
+
+  input {
+    background-color: $white-color;
+    border: 1px solid $dim-color;
+    width: 50px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .price {
+    align-items: center;
+    .oldPrice {
+      font-size: 16px;
+      transform: none;
+    }
+    .salePrice{
+      font-size: 24px;
+    }
+    .sale {
+      margin-top: 0;
+      width: 100%;
+    }
+  }
+
+  .desc {
+    width: 100%;
+  }
+
+  .quantity {
+    width: 100%;
+    button, span {
+      margin: 12px 0;
+    }
+  }
+
+  .action {
+    flex-wrap: wrap;
+    button {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+  }
+
+  .title {
+    font-size: 16px;
+  }
+}

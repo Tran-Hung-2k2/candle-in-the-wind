@@ -1,0 +1,27 @@
+@import '../../../../styles/variables.scss';
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 4px;
+  color: $primary-color;
+  cursor: pointer;
+}
+
+.count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: $primary-color;
+  height: 24px;
+  width: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid $white-color;
+  border-radius: 50%;
+  text-align: center;
+  color: $white-color;
+}

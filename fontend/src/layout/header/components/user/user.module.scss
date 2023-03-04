@@ -1,0 +1,42 @@
+@import '../../../../styles/variables.scss';
+
+.avatar {
+  overflow: hidden;
+  width: 28px;
+  height: 28px;
+  border: 100%;
+  margin-right: 8px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.username {
+  font-weight: 500;
+  transform: translateY(-1px);
+  margin-right: 20px;
+}
+
+.options {
+  background-color: $white-color;
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  max-height: min((100vh - 96px) - 60px, 734px);
+  overflow-y: auto;
+  animation: appear linear 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.item {
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f1f1f1;
+  }
+
+  & + .item {
+    border-top: 1px solid #e8e8e8;
+  }
+}

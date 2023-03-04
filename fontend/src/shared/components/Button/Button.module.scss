@@ -1,0 +1,105 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  padding-top: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  min-width: 90px;
+  min-height: 32px;
+  background-color: $white-color;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+
+  // button css
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+
+  + .wrapper {
+    margin-left: 8px;
+  }
+
+  &.disable {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+// Button Type
+.rounded {
+  border-radius: 999px;
+}
+
+.outline {
+  color: #d3d3d3;
+  box-shadow: 0 2px 8px rgb(0 0 0/ 6%);
+  border-color: rgba(22, 24, 35, 0.12);
+
+  &:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.pNoneOutline {
+  color: $primary-color;
+  border-radius: 0;
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+.pOutline {
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.primary {
+  color: $white-color;
+  background-color: $primary-color;
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), $primary-color;
+  }
+}
+
+.text {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Button Size
+.small {
+  min-width: 88px;
+  min-height: 32px;
+}
+
+.large {
+  width: 100%;
+  min-height: 32px;
+}
+
+@media screen and (max-width: 739px) {
+  .wrapper {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1113px) {
+  .wrapper {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,22 @@
+.notFoundPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+
+  .content {
+    text-align: center;
+    h4 {
+      font-size: 80px;
+      font-weight: 500;
+      margin: 12px;
+    }
+
+    p {
+      margin-left: 4px;
+      font-size: 20px;
+      color: #444;
+      letter-spacing: 1px;
+    }
+  }
+}

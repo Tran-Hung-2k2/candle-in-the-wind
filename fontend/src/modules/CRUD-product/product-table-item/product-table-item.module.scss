@@ -1,0 +1,70 @@
+@import '../../../styles/variables.scss';
+
+.image-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 16px;
+  width: 30%;
+}
+
+.id-product {
+  width: 10%;
+}
+
+.category,
+.price {
+  width: 10%;
+}
+
+.created-at {
+  width: 10%;
+}
+
+.action {
+  width: 10%;
+}
+
+.id-product,
+.category,
+.price,
+.created-at,
+.action {
+  text-align: center;
+}
+
+.action {
+  button {
+    background-color: $primary-color;
+    color: $white-color;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin: 0 4px;
+
+    &:hover {
+      background-color: $dark-primary-color;
+    }
+  }
+}
+
+.row {
+  background-color: $white-color;
+
+  td {
+    padding: 4px;
+  }
+}

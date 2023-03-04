@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form {
+  background-color: $white-color;
+  padding: 24px;
+
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio-button {
+    margin-right: 6px;
+
+    input {
+      margin-right: 4px;
+      margin-top: 4px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

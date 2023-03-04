@@ -1,0 +1,23 @@
+.column-2 {
+  width: calc(100% / 6);
+  // margin: 0 -4px;
+}
+
+.column-10 {
+  flex: 1;
+  padding: 0 4px;
+  // margin: 0 -4px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-wrapper {
+  padding: 0 4px;
+}
+
+.page {
+  margin-top: 28px;
+}

@@ -1,0 +1,24 @@
+@import '../../../styles/variables.scss';
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  span {
+    margin-right: 12px;
+    transform: translateY(-2px);
+  }
+  .filter {
+    font-size: 16px;
+    padding: 2px;
+    border-radius: 0;
+    width: 100%;
+    max-width: 200px;
+    outline: 2px solid $primary-color;
+  }
+  .filter-option {
+    border-radius: 0;
+    padding: 2px;
+  }
+}

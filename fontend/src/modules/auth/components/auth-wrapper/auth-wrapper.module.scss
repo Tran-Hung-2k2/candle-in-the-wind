@@ -1,0 +1,60 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+  width: 50%;
+  width: 100%;
+  max-width: 480px;
+  margin: 32px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border: 1px solid $dim-color;
+}
+
+.tab {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $dim-color;
+  background-color: $neutral-color;
+
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+  }
+
+  &.active {
+    color: $black-color;
+    background-color: $white-color;
+    span::after {
+      content: '';
+      position: absolute;
+      height: 4px;
+      background-color: red;
+      top: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+      border-radius: 10px;
+    }
+  }
+}
+
+.form {
+  padding: 20px;
+  background-color: $white-color;
+  text-align: start;
+  .alert {
+    line-height: 1.4;
+    margin-top: 20px;
+    cursor: default;
+    span {
+      cursor: pointer;
+      color: $secondary-color;
+    }
+  }
+}

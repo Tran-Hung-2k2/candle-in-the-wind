@@ -1,0 +1,81 @@
+@import '../../../styles/variables.scss';
+
+.product-detail-images-swiper {
+  width: 100%;
+  padding: 20px;
+
+  .images-swiper {
+    height: 400px;
+    margin-bottom: 10px;
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $white-color;
+      background-color: rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      &::after {
+        font-size: 16px;
+      }
+    }
+    .swiper-button-prev {
+      left: 35;
+    }
+    .swiper-button-next {
+      right: 35;
+    }
+  }
+
+  .thumb-swiper {
+    .swiper-slide {
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      padding: 10px;
+      &-thumb-active {
+        border-color: $primary-color;
+      }
+
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
+
+    &-thumbnail {
+      width: 100%;
+      padding-top: 65%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  .product-detail-images-swiper {
+    padding: 0;
+  }
+}

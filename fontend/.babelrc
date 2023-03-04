@@ -1,0 +1,14 @@
+{
+    "plugins": [
+      ["module-resolver", {
+        "alias": {
+          "~": "./src",
+          "@components": "./src/shared/components",
+          "@models": "./src/shared/models",
+          "@services": "./src/shared/services",
+          "@utils": "./src/shared/utils",
+          "@constants": "./src/shared/constants"
+        }
+      }]
+    ]
+  }
