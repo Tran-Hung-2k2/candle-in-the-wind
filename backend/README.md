@@ -9,9 +9,10 @@
 (Make sure you have installed git, npm, xampp or mysql, ...)
 
 After run backend_cnpm.sql we will have:
-- Account admin: 
-email: admin@gmail.com
-password: admin
+
+- Account admin:
+  email: admin@gmail.com
+  password: admin
 - Account user:
-email: tester@gmail.com
-password: tester
+  email: tester@gmail.com
+  password: tester
