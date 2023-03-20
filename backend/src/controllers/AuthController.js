@@ -30,6 +30,7 @@ const authController = {
     );
   },
 
+  // [POST] /auth/register
   async register(req, res) {
     try {
       if (!req.body.fullname || !req.body.email || !req.body.password || !req.body.phone_number)
@@ -75,6 +76,7 @@ const authController = {
     }
   },
 
+  // [POST] /auth/login
   async login(req, res) {
     try {
       if (!req.body.email || !req.body.password)
@@ -120,6 +122,7 @@ const authController = {
     }
   },
 
+  // [POST] /auth/refreshToken
   async refreshToken(req, res) {
     const refreshToken = req.cookies.refreshToken;
     if (!refreshToken)
@@ -155,6 +158,7 @@ const authController = {
     });
   },
 
+  // [POST] /auth/logout
   async logout(req, res) {
     res.clearCookie('accessToken');
     res.clearCookie('refreshToken');

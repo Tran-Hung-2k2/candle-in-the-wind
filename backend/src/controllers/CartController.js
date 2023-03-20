@@ -2,6 +2,7 @@ import db from '../models/index.js';
 import { Op } from 'sequelize';
 
 const cartController = {
+  // [GET] /cart/getCart
   async getCart(req, res) {
     try {
       const { Products } = await db.User.findOne({
@@ -42,6 +43,7 @@ const cartController = {
     }
   },
 
+  // [POST] /cart/addProductToCart
   async addProductToCart(req, res) {
     try {
       if (!req.body.ID_Product || !req.body.quantity)
@@ -94,6 +96,7 @@ const cartController = {
     }
   },
 
+  // [DELETE] /cart/deleteProductFromCart
   async deleteProductFromCart(req, res) {
     try {
       if (!req.body.ID_Product)
@@ -121,6 +124,7 @@ const cartController = {
     }
   },
 
+  // [DELETE] /cart/deleteCart
   async deleteCart(req, res) {
     try {
       await db.Cart.destroy({

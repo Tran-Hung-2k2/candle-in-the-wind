@@ -14,7 +14,7 @@ authRouter.post('/refreshToken', authController.refreshToken);
 //     return res.status(200).json(req.user.id);
 // })
 
-// If you want to get current logged in user id, take in req.user.id 
+// If you want to get current logged in user id, take in req.user.id
 // If you want to check logged in as admin, use authMiddleware.verifyAdmin instead of authMiddleware.verifyUser
 
 export default authRouter;
