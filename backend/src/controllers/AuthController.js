@@ -33,45 +33,57 @@ const authController = {
   // [POST] /auth/register
   async register(req, res) {
     try {
-      if (!req.body.fullname || !req.body.email || !req.body.password || !req.body.phone_number)
-        return res.status(500).json({
+      // Destructure fields from request body
+      const { fullname, email, password, phone_number, address } = req.body;
+
+      // Check if required fields are present
+      if (!fullname || !email || !password || !phone_number) {
+        return res.status(400).json({
           isError: true,
           message: 'Missing required field',
         });
+      }
 
-      if (!emailValidator.validate(req.body.email))
-        return res.status(500).json({
+      // Validate email using email-validator library
+      if (!emailValidator.validate(email)) {
+        return res.status(400).json({
           isError: true,
           message: 'Email is invalid',
         });
+      }
 
-      const dbUser = await db.User.findOne({
-        where: { email: req.body.email },
-      });
-
-      if (dbUser)
-        return res.status(500).json({
+      // Check if email already exists in database
+      const dbUser = await db.User.findOne({ where: { email } });
+      if (dbUser) {
+        return res.status(400).json({
           isError: true,
           message: 'Email is already existed',
         });
+      }
 
+      // Generate salt and hash password using bcrypt library
       const salt = await bcrypt.genSalt(10);
-      const hashed = await bcrypt.hash(req.body.password, salt);
+      const hashedPassword = await bcrypt.hash(password, salt);
+
+      // Create new user in database
       const user = await db.User.create({
         ID_Role: 2,
-        fullname: req.body.fullname,
-        email: req.body.email,
-        phone_number: req.body.phone_number,
-        address: req.body.address,
-        password: hashed,
+        fullname,
+        email,
+        phone_number,
+        address,
+        password: hashedPassword,
       });
 
-      return res.status(200).json({
+      // Return success response with newly created user object
+      return res.status(201).json({
         isError: false,
         user,
         message: 'Register Successfully',
       });
     } catch (error) {
+      // Log error and return error response
+      console.error(error);
       return res.status(500).json({ isError: true });
     }
   },
@@ -79,44 +91,39 @@ const authController = {
   // [POST] /auth/login
   async login(req, res) {
     try {
-      if (!req.body.email || !req.body.password)
-        return res.status(500).json({
+      const { email, password } = req.body;
+      if (!email || !password) {
+        return res.status(400).json({
           isError: true,
           message: 'Missing required field',
         });
+      }
 
       const user = await db.User.findOne({
-        where: { email: req.body.email },
+        where: { email },
       });
 
-      if (!user)
-        return res.status(500).json({
+      if (!user || !(await bcrypt.compare(password, user.password))) {
+        return res.status(401).json({
           isError: true,
           message: 'Wrong username or password',
         });
+      }
 
-      const validPassword = await bcrypt.compare(req.body.password, user.password);
-
-      if (validPassword) {
-        const accessToken = authController.generateAccessToken(user);
-        const refreshToken = authController.generateRefreshToken(user);
-        res.cookie('accessToken', accessToken, {
-          httpOnly: true,
-        });
-        res.cookie('refreshToken', refreshToken, {
-          httpOnly: true,
-        });
-        return res.status(200).json({
-          isError: false,
-          message: 'Login Successfully',
-          user: user,
-          accessToken,
-        });
-      } else
-        return res.status(500).json({
-          isError: true,
-          message: 'Wrong username or password',
-        });
+      const accessToken = authController.generateAccessToken(user);
+      const refreshToken = authController.generateRefreshToken(user);
+      res.cookie('accessToken', accessToken, {
+        httpOnly: true,
+      });
+      res.cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+      });
+      return res.status(200).json({
+        isError: false,
+        message: 'Login Successfully',
+        user: user,
+        accessToken,
+      });
     } catch (error) {
       return res.status(500).json({ isError: true });
     }

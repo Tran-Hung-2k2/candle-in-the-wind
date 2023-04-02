@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 function ProductItem({ data }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const image = data?.Images?.[0]?.content;
 
   const onAddItemToCart = (item) => {
     dispatch(addProductToCartThunk(item, 1));
@@ -27,7 +28,7 @@ function ProductItem({ data }) {
           <div
             className={cx('image')}
             style={{
-              backgroundImage: `url(${data?.Images?.[0]?.content})`,
+              backgroundImage: `url(${image})`,
             }}
           ></div>
           <div className={cx('info')}>
