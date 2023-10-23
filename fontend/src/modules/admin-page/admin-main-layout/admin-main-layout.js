@@ -6,11 +6,11 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(style);
 
 function AdminMainLayout() {
-  return (
-    <div className={cx('wrapper')}>
-      <Outlet />
-    </div>
-  );
+    return (
+        <div className={cx('wrapper')}>
+            <Outlet />
+        </div>
+    );
 }
 
 export default AdminMainLayout;

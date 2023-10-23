@@ -1,17 +1,17 @@
 @import '../../../styles/variables.scss';
 
 .item-wrapper {
-  border-bottom: 2px solid $dim-color;
+    border-bottom: 2px solid $dim-color;
 }
 
 .item-wrapper:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .cart-empty {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    overflow: hidden;
 }

@@ -1,50 +1,50 @@
 @import '../../../../styles/variables.scss';
 
 .form {
-  padding: 20px 0;
-  background-color: $white-color;
+    padding: 20px 0;
+    background-color: $white-color;
 
-  .alert {
-    color: $error-color;
-    margin-top: 8px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-
-  .formGroup {
-    margin: 20px 0;
-
-    input {
-      font-size: 18px;
-      letter-spacing: 0.04rem;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid $primary-color;
-      width: 100%;
-      padding: 12px 2px;
-
-      &::placeholder {
-        color: $dim-color;
-      }
+    .alert {
+        color: $error-color;
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 500;
     }
-  }
 
-  .submitButton {
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    border: none;
-    background-color: $primary-color;
-    font-size: 16px;
-    font-weight: 700;
-    color: $white-color;
-    margin-top: 20px;
-    cursor: pointer;
+    .formGroup {
+        margin: 20px 0;
 
-    &:disabled {
-      cursor: default;
-      filter: grayscale(0.5);
-      opacity: 0.5;
+        input {
+            font-size: 18px;
+            letter-spacing: 0.04rem;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $primary-color;
+            width: 100%;
+            padding: 12px 2px;
+
+            &::placeholder {
+                color: $dim-color;
+            }
+        }
     }
-  }
+
+    .submitButton {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border: none;
+        background-color: $primary-color;
+        font-size: 16px;
+        font-weight: 700;
+        color: $white-color;
+        margin-top: 20px;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: default;
+            filter: grayscale(0.5);
+            opacity: 0.5;
+        }
+    }
 }

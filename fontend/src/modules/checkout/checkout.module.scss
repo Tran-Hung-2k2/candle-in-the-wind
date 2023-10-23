@@ -1,43 +1,43 @@
 @import '../../styles/variables.scss';
 
 .confirm-button {
-  padding: 10px 20px;
-  color: $white-color;
-  background-color: $primary-color;
-  border: none;
-  width: 100%;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s ease;
+    padding: 10px 20px;
+    color: $white-color;
+    background-color: $primary-color;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
 
-  &:hover {
-    opacity: 0.9;
-  }
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 .wrapper {
-  .form {
-    background-color: $white-color;
-    padding: 28px;
-    .form-group {
-      label {
-        width: 100%;
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 8px;
-      }
+    .form {
+        background-color: $white-color;
+        padding: 28px;
+        .form-group {
+            label {
+                width: 100%;
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
 
-      input {
-        border: 2px solid $neutral-color;
-        color: $black-color;
-        font-size: 14px;
-        letter-spacing: 0.02rem;
-        width: 100%;
-        padding: 10px 8px;
-      }
+            input {
+                border: 2px solid $neutral-color;
+                color: $black-color;
+                font-size: 14px;
+                letter-spacing: 0.02rem;
+                width: 100%;
+                padding: 10px 8px;
+            }
+        }
     }
-  }
 }

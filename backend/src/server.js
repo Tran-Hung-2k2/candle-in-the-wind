@@ -10,10 +10,10 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 
 app.use(
-  cors({
-    origin: 'http://localhost:3001',
-    credentials: true,
-  }),
+	cors({
+		origin: 'http://localhost:3001',
+		credentials: true,
+	}),
 );
 app.use(cookieParser());
 app.use(express.json());
@@ -22,5 +22,5 @@ app.use(express.static('public'));
 route(app);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+	console.log(`Server is running on http://localhost:${PORT}`);
 });

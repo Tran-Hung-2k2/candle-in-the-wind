@@ -9,13 +9,13 @@ import productReducer from './product/product.reducer';
 import userProfileReducer from './user-profile/user-profile.reducer';
 
 const rootReducer = combineReducers({
-  product: productReducer,
-  layer: layerReducer,
-  userProfile: userProfileReducer,
-  post: postsReducer,
-  cart: cartReducer,
-  checkout: checkoutReducer,
-  order: orderReducer,
+    product: productReducer,
+    layer: layerReducer,
+    userProfile: userProfileReducer,
+    post: postsReducer,
+    cart: cartReducer,
+    checkout: checkoutReducer,
+    order: orderReducer,
 });
 
 const middleware = [thunk];

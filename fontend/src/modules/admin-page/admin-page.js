@@ -8,17 +8,17 @@ import AdminHeader from './admin-header/admin-header';
 const cx = classNames.bind(style);
 
 function AdminPage() {
-  return (
-    <div className="flex">
-      <div className={cx('sidebar')}>
-        <AdminSidebar />
-      </div>
-      <div className={cx('main-layout')}>
-        <AdminHeader />
-        <AdminMainLayout />
-      </div>
-    </div>
-  );
+    return (
+        <div className="flex">
+            <div className={cx('sidebar')}>
+                <AdminSidebar />
+            </div>
+            <div className={cx('main-layout')}>
+                <AdminHeader />
+                <AdminMainLayout />
+            </div>
+        </div>
+    );
 }
 
 export default AdminPage;

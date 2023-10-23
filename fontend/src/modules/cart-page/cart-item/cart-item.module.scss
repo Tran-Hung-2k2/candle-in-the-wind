@@ -1,98 +1,98 @@
 @import '../../../styles/variables.scss';
 
 .item-image {
-  width: 35%;
-  overflow: hidden;
-  border-radius: 8px;
-  height: 160px;
-  cursor: pointer;
+    width: 35%;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 160px;
+    cursor: pointer;
 }
 
 .item-info {
-  width: 65%;
-  padding: 8px 12px;
-  padding-left: 20px;
+    width: 65%;
+    padding: 8px 12px;
+    padding-left: 20px;
 
-  .item-title {
-    font-size: 16px;
-    cursor: pointer;
-  }
+    .item-title {
+        font-size: 16px;
+        cursor: pointer;
+    }
 
-  .item-desc {
-    font-size: 14px;
-    line-height: 1.5;
-    padding-right: 20px;
-  }
+    .item-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        padding-right: 20px;
+    }
 
-  .item-brand {
-    font-size: 14px;
-    color: #999;
-    font-weight: 500;
-    margin-top: 4px;
-    margin-bottom: 12px;
-  }
+    .item-brand {
+        font-size: 14px;
+        color: #999;
+        font-weight: 500;
+        margin-top: 4px;
+        margin-bottom: 12px;
+    }
 }
 
 .item-price {
-  color: $primary-color;
-  font-weight: 600;
-  font-size: 16px;
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .item-price-final {
-  color: $primary-color;
-  font-weight: 700;
-  font-size: 16px;
-  margin-right: 8px;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 8px;
 }
 
 .quantity {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  span {
-    font-size: 20px;
-    color: $primary-color;
-    font-weight: 600;
-  }
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-size: 20px;
+        color: $primary-color;
+        font-weight: 600;
+    }
 }
 
 .remove-icon {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  font-size: 20px;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 4px;
-  background-color: $secondary-color;
-  color: $white-color;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-  &:hover {
-    background-color: $primary-color;
-  }
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    font-size: 20px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: $secondary-color;
+    color: $white-color;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+        background-color: $primary-color;
+    }
 }
 
 @media screen and (max-width: 739px) {
-  .item-brand {
-    margin: 4px 0;
-  }
+    .item-brand {
+        margin: 4px 0;
+    }
 
-  .item-desc {
-    display: none;
-  }
-  .item-image {
-    height: auto;
-  }
-  .item-price {
-    font-size: 14px;
-  }
-  .item-price-final {
-    font-size: 14px;
-  }
+    .item-desc {
+        display: none;
+    }
+    .item-image {
+        height: auto;
+    }
+    .item-price {
+        font-size: 14px;
+    }
+    .item-price-final {
+        font-size: 14px;
+    }
 }

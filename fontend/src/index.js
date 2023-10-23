@@ -12,12 +12,12 @@ import { ToastContainer } from 'react-toastify';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 root.render(
-  <Router>
-    <Provider store={store}>
-      <App />
-      <ToastContainer position="bottom-right" />
-    </Provider>
-  </Router>,
+    <Router>
+        <Provider store={store}>
+            <App />
+            <ToastContainer position="bottom-right" />
+        </Provider>
+    </Router>,
 );
 
 reportWebVitals();

@@ -7,13 +7,13 @@ import CartBill from './cart-bill/cart-bill';
 const cx = classNames.bind(style);
 
 function CartPage() {
-  return (
-    <div>
-      <h2 className="section-title text-center">Shopping Cart</h2>
-      <CartList />
-      <CartBill />
-    </div>
-  );
+    return (
+        <div>
+            <h2 className="section-title text-center">Shopping Cart</h2>
+            <CartList />
+            <CartBill />
+        </div>
+    );
 }
 
 export default CartPage;

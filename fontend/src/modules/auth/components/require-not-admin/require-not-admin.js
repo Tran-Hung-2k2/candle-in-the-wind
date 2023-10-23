@@ -5,26 +5,26 @@ import { Outlet } from 'react-router-dom';
 import Unauthorize from '../unauthorize/unauthorize';
 
 function RequireNotAdmin() {
-  const userProfile = useSelector((state) => state.userProfile);
-  const { role } = userProfile;
+    const userProfile = useSelector((state) => state.userProfile);
+    const { role } = userProfile;
 
-  const isNotAdmin = () => {
-    return role !== ADMIN_ROLE;
-  };
+    const isNotAdmin = () => {
+        return role !== ADMIN_ROLE;
+    };
 
-  return (
-    <>
-      {isNotAdmin() ? (
-        <div className=" py-8">
-          <div className="grid wide">
-            <Outlet></Outlet>
-          </div>
-        </div>
-      ) : (
-        <Unauthorize />
-      )}
-    </>
-  );
+    return (
+        <>
+            {isNotAdmin() ? (
+                <div className=" py-8">
+                    <div className="grid wide">
+                        <Outlet></Outlet>
+                    </div>
+                </div>
+            ) : (
+                <Unauthorize />
+            )}
+        </>
+    );
 }
 
 export default RequireNotAdmin;

@@ -1,36 +1,36 @@
 @import '../../../../styles/variables.scss';
 
 .form {
-  padding: 20px 0;
-  background-color: $white-color;
-  .formGroup {
-    margin: 20px 0;
+    padding: 20px 0;
+    background-color: $white-color;
+    .formGroup {
+        margin: 20px 0;
 
-    input {
-      font-size: 18px;
-      letter-spacing: 0.04rem;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid $primary-color;
-      width: 100%;
-      padding: 12px 2px;
+        input {
+            font-size: 18px;
+            letter-spacing: 0.04rem;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid $primary-color;
+            width: 100%;
+            padding: 12px 2px;
 
-      &::placeholder {
-        color: $dim-color;
-      }
+            &::placeholder {
+                color: $dim-color;
+            }
+        }
     }
-  }
 
-  .submitButton {
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    border: none;
-    background-color: $primary-color;
-    font-size: 16px;
-    font-weight: 700;
-    color: $white-color;
-    margin-top: 20px;
-    cursor: pointer;
-  }
+    .submitButton {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border: none;
+        background-color: $primary-color;
+        font-size: 16px;
+        font-weight: 700;
+        color: $white-color;
+        margin-top: 20px;
+        cursor: pointer;
+    }
 }

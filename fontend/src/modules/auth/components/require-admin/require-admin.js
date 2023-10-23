@@ -6,23 +6,23 @@ import { ADMIN_ROLE } from '~/shared/constants/role';
 import Unauthorize from '../unauthorize/unauthorize';
 
 function RequireAdmin() {
-  const userProfile = useSelector((state) => state.userProfile);
-  const { isLoggedIn, role } = userProfile;
-  const location = useLocation();
+    const userProfile = useSelector((state) => state.userProfile);
+    const { isLoggedIn, role } = userProfile;
+    const location = useLocation();
 
-  const isAdmin = () => {
-    return role === ADMIN_ROLE;
-  };
+    const isAdmin = () => {
+        return role === ADMIN_ROLE;
+    };
 
-  return isLoggedIn ? (
-    isAdmin() ? (
-      <AdminPage />
+    return isLoggedIn ? (
+        isAdmin() ? (
+            <AdminPage />
+        ) : (
+            <Unauthorize />
+        )
     ) : (
-      <Unauthorize />
-    )
-  ) : (
-    <Navigate to="/login" state={{ from: location }} replace />
-  );
+        <Navigate to="/login" state={{ from: location }} replace />
+    );
 }
 
 export default RequireAdmin;

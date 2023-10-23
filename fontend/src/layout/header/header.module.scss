@@ -1,21 +1,21 @@
 @import '../../styles/variables.scss';
 
 .logo {
-  font-weight: 400;
-  font-size: 36px;
-  color: $primary-color;
-  line-height: 60px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: $primary-color;
+    line-height: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .hide {
-  display: none;
+    display: none;
 }

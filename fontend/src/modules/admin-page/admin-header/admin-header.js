@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux';
 const cx = classNames.bind(style);
 
 function AdminHeader() {
-  const { user } = useSelector((state) => state.userProfile);
-  return (
-    <div className="flex justify-end px-4 py-4 bg-white">
-      <User user={user} disabledAction={true} />
-    </div>
-  );
+    const { user } = useSelector((state) => state.userProfile);
+    return (
+        <div className="flex justify-end px-4 py-4 bg-white">
+            <User user={user} disabledAction={true} />
+        </div>
+    );
 }
 
 export default AdminHeader;

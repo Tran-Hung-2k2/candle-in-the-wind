@@ -1,45 +1,45 @@
 @import '../../../styles/variables.scss';
 
 .item-image {
-  width: 80px;
-  height: 80px;
-  overflow: hidden;
-  border-radius: 4px;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 4px;
 
-  img {
-    width: 100%;
-    object-position: center;
-  }
+    img {
+        width: 100%;
+        object-position: center;
+    }
 }
 
 .item-info {
-  padding-top: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
-  flex: 1;
+    padding-top: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    flex: 1;
 
-  .item-title {
-    line-height: 1.5;
-  }
+    .item-title {
+        line-height: 1.5;
+    }
 
-  .item-brand {
-    font-size: 14px;
-    color: #999;
-    font-weight: 500;
-  }
+    .item-brand {
+        font-size: 14px;
+        color: #999;
+        font-weight: 500;
+    }
 
-  .item-price {
-    font-size: 14px;
-    margin-top: 5px;
-    font-weight: 600;
-  }
+    .item-price {
+        font-size: 14px;
+        margin-top: 5px;
+        font-weight: 600;
+    }
 }
 
 .item-quantity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  padding-right: 8px;
-  user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding-right: 8px;
+    user-select: none;
 }
